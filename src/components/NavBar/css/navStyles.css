@@ -1,0 +1,38 @@
+/* color naranja #fa5100 */
+.navBar{
+    width: 100%;
+    background: #8b8b8b;
+
+    margin: auto;
+    margin-top: 10px;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    
+    
+}
+header .navBar .logoHeader{
+    width: 200px;
+}
+.carro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.carroImg{
+    width: 100px;
+}
+
+/* ItemListContainer */
+.itemContainer{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+}
