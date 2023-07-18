@@ -4,14 +4,13 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 
 function App() {
-
   return (
     <div className='mainContainer'>
       <NavBar />
-      
-      <ItemListContainer itemList="Bienvenido" />
+      <ItemListContainer greeting="Hola" />
     </div>
   );
 }
+
 
 export default App;

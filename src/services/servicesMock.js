@@ -1,0 +1,41 @@
+const data = [
+    {
+        title: "Ventana de aluminio estándar",
+        id: 1,
+        price: 150,
+        stock: 10,
+        description: "Ventana de aluminio estándar de tamaño medio.",
+        img: "https://www.aberturasruta8.com.ar/wp-content/uploads/2019/11/ventana-aluminio-modena1.jpg"
+    },
+    // {
+    //     title: "Ventana de aluminio con cristal doble",
+    //     id: 2,
+    //     price: 200,
+    //     stock: 5,
+    //     description: "Ventana de aluminio con cristal doble para mayor aislamiento.",
+    //     img: "https://http2.mlstatic.com/D_NQ_NP_890556-MLA31578035313_072019-O.webp"
+    // },
+    // {
+    //     title: "Ventana de aluminio corredera",
+    //     id: 3,
+    //     price: 180,
+    //     stock: 8,
+    //     description: "Ventana de aluminio corredera de tamaño grande.",
+    //     img: "https://www.tecnooeste.com.ar/image/cache/herrero/ventanas-aluminio-blanco-120x110-vidrio-repartido-D_NQ_NP_623086-MLA32093709828_092019-F-800x800.jpg"
+    // },
+]
+
+
+// 1 GENERAMOS LA PROMISE
+// 2 SIMULAMOS LOS RETARDOS CON SETTIMEOUT
+// 3 rESOLVEMOS LOS PRODUCTOS CON "RESOLVE"
+// 4 RETORNAMOS LA PROMISE
+function getData() {
+    return new Promise( (resolve,reject)=>{
+        setTimeout(() => {
+            resolve(data)
+        }, 1000);
+    })
+
+}
+export default getData;
