@@ -5,14 +5,16 @@ import ButtonComponent from "../NavBar/ButtonComponent/ButtonComponent";
 import "./itemDetailContainerStyles.css"
 import {getProductData} from "../../services/servicesMock";
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
 
-// HACER CONTADOR
+
 function ItemDetailContainer(){
     const [product, setProduct] = useState({})
+    const {id}=(useParams())
     
     async function requestData() {
-        const respuesta = await getProductData()
+        const respuesta = await getProductData(id)
         setProduct(respuesta)
     }
     useEffect(
@@ -22,6 +24,6 @@ function ItemDetailContainer(){
         []
     )
     return <ItemDetail {...product} />
-    // title={product.title} img={product.img} price={product.price} description={product.description}
+
 }
 export default ItemDetailContainer;
