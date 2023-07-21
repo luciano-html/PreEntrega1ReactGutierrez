@@ -1,12 +1,13 @@
-img{
-    width: 200px;
+.greeting{
+    width: 100%;
 }
-.tarjeta{
+.detailContainer{
+    scale: 1.2;
     background-color: white;
     width: 400px;
     padding: 25px;
     border: 1px solid #8b8b8b;
-    margin: 25px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;

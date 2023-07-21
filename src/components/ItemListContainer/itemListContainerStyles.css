@@ -1,5 +1,13 @@
+.greeting{
+    width: 100%;
+}
 .itemContainer{
+    background-color: white;
+    width: 100%;
     display: flex;
+    margin: auto;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 100px;
 }

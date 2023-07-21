@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import getData from "../../services/servicesMock";
 import Item from "../Item/Item";
 import "./itemListContainerStyles.css"
+import ButtonComponent from "../NavBar/ButtonComponent/ButtonComponent";
+import ItemList from "./ItemList";
+
 
 function ItemListContainer(props) {
     // 1 OBTENER DE FORMA ASYNC LA LISTA DEL ECOMMERCE
@@ -26,10 +29,11 @@ function ItemListContainer(props) {
 
     return (
         <div className="itemContainer">
-            <h1>{props.greeting}</h1>
+            <h1 className="greeting" >{props.greeting}</h1>
             {products.map((item) => (
                 <Item key={item.id} {...item} />
             ))}
+            
         </div>
     )
 }
