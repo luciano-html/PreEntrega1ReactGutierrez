@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import React from "react";
-import getData from "../../services/servicesMock";
-import ButtonComponent from "../NavBar/ButtonComponent/ButtonComponent";
 import "./itemDetailContainerStyles.css"
 import {getProductData} from "../../services/servicesMock";
 import ItemDetail from "./ItemDetail";
@@ -16,12 +14,13 @@ function ItemDetailContainer(){
     async function requestData() {
         const respuesta = await getProductData(id)
         setProduct(respuesta)
+        
     }
     useEffect(
         () => {
             requestData();
         },
-        []
+        [id]
     )
     return <ItemDetail {...product} />
 

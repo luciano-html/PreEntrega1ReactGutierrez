@@ -1,30 +1,28 @@
 import React, { useState, useEffect } from "react";
-import getData from "../../services/servicesMock";
-import Item from "../Item/Item";
+import getData, { getProductByCategory } from "../../services/servicesMock";
 import "./itemListContainerStyles.css"
-import ButtonComponent from "../NavBar/ButtonComponent/ButtonComponent";
 import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
 
 function ItemListContainer(props) {
-    // 1 OBTENER DE FORMA ASYNC LA LISTA DEL ECOMMERCE
-    // 2 GUARDAMOS LA RESPUESTA EN UN ESTADO
-    // 3 USAMOS KEY PARA EL MAP
-    // 4
     const [products, setProducts] = useState([])
+    const {categoryId} = useParams()
+    
 
-    async function requestData() {
-        const respuesta = await getData()
-        setProducts(respuesta)
-    }
+        async function requestData() {
+            const respuesta = categoryId?  await getProductByCategory(categoryId) : await getData()
+            setProducts(respuesta)
+            
+        }
+
     useEffect(
         () => {
-            console.log("Montaje ILT")
             requestData();
         },
-        []
+        [categoryId]
     )
     return (
-        <ItemList products={products}/>
+        <ItemList products={products} />
 
         // <div className="itemContainer">
         //     <h1 className="greeting" >{props.greeting}</h1>
