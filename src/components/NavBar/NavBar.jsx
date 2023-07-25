@@ -8,8 +8,8 @@ function NavBar() {
     <header>
       <nav className="navBar">
         <Link to="/"><img className='logoHeader'alt="asd" src='https://herfasa.com/wp-content/uploads/2020/12/logo.png'></img></Link>
-        <ButtonComponent to="/category/puertas" label="PUERTAS"/>
-        <ButtonComponent to="/category/ventanas" label="VENTANAS"/>
+        <ButtonComponent to="/category/puertas" label="Puertas"/>
+        <ButtonComponent to="/category/ventanas" label="Ventanas"/>
         <ButtonComponent label="CONTACTO"/>
         <Carrito/>
       </nav>

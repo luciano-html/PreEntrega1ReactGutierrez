@@ -23,13 +23,6 @@ function ItemListContainer(props) {
     )
     return (
         <ItemList products={products} />
-
-        // <div className="itemContainer">
-        //     <h1 className="greeting" >{props.greeting}</h1>
-        //     {products.map((item) => (
-        //         <Item key={item.id} {...item} />
-        //     ))}
-        // </div>
     )
 }
 export default ItemListContainer;

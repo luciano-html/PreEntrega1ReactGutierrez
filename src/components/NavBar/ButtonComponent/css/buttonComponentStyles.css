@@ -1,8 +1,13 @@
 .btnNav{
     text-decoration: none;
-    background-color: #fa5100;
-    color: white;
-    padding: 3px;
-    border-radius: px;
+    /* background-color: #fa5100; */
+    color: black;
+    padding: 8px;
+    outline: 1px solid #fa5100;
+    border-radius: 5px;
     font-size: 20px;
+}
+.btnNav:hover{
+    background-color:#fa5100 ;
+    color: white;
 }
