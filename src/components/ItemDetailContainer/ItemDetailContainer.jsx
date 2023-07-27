@@ -14,6 +14,7 @@ function ItemDetailContainer(){
     async function requestData() {
         const respuesta = await getProductData(id)
         setProduct(respuesta)
+        console.log(respuesta)
         
     }
     useEffect(

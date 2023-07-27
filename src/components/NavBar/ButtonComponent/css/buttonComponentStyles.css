@@ -1,13 +1,37 @@
-.btnNav{
+.btnNav {
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    color: #000;
     text-decoration: none;
-    /* background-color: #fa5100; */
-    color: black;
-    padding: 8px;
+    border-radius: 2px;
     outline: 1px solid #fa5100;
-    border-radius: 5px;
-    font-size: 20px;
+    transition: transform 0.3s ease;
+    
+    
+
+
 }
-.btnNav:hover{
-    background-color:#fa5100 ;
-    color: white;
+
+.btnNav:hover {
+
+    
+    transform: scale(1.2);
+    outline: 0px solid #fa5100; 
+}
+
+.btnNav::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fa5100;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+
+}
+
+.btnNav:hover::after {
+    transform: scale(1);
+
 }
