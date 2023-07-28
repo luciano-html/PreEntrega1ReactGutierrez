@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import "./itemDetailContainerStyles.css"
-import {getProductData} from "../../services/servicesMock";
+import { getProductData } from "../../services/servicesMock";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 
 
 
-function ItemDetailContainer(){
+function ItemDetailContainer() {
     const [product, setProduct] = useState({})
-    const {id}=(useParams())
-    
+    const { id } = (useParams())
+
     async function requestData() {
         const respuesta = await getProductData(id)
         setProduct(respuesta)
-        console.log(respuesta)
         
+
     }
     useEffect(
         () => {
@@ -23,6 +23,9 @@ function ItemDetailContainer(){
         },
         [id]
     )
+
+    
+
     return <ItemDetail {...product} />
 
 }

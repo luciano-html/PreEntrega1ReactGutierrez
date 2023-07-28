@@ -19,6 +19,7 @@
     border: 1px solid #8b8b8b;
 }
 .detailContainer .imgContainer img{
+    margin-right: 30px;
     width: 350px;
 }
 .detailContainer .descriptionContainer{

@@ -1,0 +1,9 @@
+.contadorContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contador{
+    display: flex;
+    align-items: center;
+}

@@ -1,6 +1,14 @@
 import React from "react";
-import ButtonComponent from "../NavBar/ButtonComponent/ButtonComponent";
+
+import ItemCountContainer from "../ItemCount/ItemCountCotainer";
+
+
 function ItemDetail(props) {
+    
+    function handleAddToCart(count) {
+        alert(`Agregaste ${count} cantidad/es de ${props.title} al carrito`)
+        
+    }
     return (
         <div className="detailContainer" >
 
@@ -12,7 +20,8 @@ function ItemDetail(props) {
                 <h2>{props.title}</h2>
                 <p>{props.description}</p>
                 <span>{props.price}$</span>
-                <ButtonComponent label="Comprar" />
+                <ItemCountContainer onConfirm={handleAddToCart} stock={props.stock}/>
+
             </div>
 
         </div>

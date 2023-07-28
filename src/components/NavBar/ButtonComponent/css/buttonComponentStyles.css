@@ -7,16 +7,11 @@
     border-radius: 2px;
     outline: 1px solid #fa5100;
     transition: transform 0.3s ease;
-    
-    
-
 
 }
 
 .btnNav:hover {
-
-    
-    transform: scale(1.2);
+    transform: scale(1.15);
     outline: 0px solid #fa5100; 
 }
 
