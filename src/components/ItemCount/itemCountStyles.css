@@ -4,6 +4,11 @@
     justify-content: space-between;
 }
 .contador{
+    border-radius: 2px;
+    padding: 6px;
+    outline: 1px solid #fa5100;
+    font-size: 25px;
     display: flex;
     align-items: center;
+    gap: 20px;
 }

@@ -10,12 +10,10 @@ import { useParams } from "react-router-dom";
 function ItemDetailContainer() {
     const [product, setProduct] = useState({})
     const { id } = (useParams())
-
+    
     async function requestData() {
         const respuesta = await getProductData(id)
         setProduct(respuesta)
-        
-
     }
     useEffect(
         () => {
@@ -24,9 +22,10 @@ function ItemDetailContainer() {
         [id]
     )
 
-    
+
 
     return <ItemDetail {...product} />
 
 }
+
 export default ItemDetailContainer;

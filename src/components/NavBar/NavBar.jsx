@@ -1,9 +1,11 @@
-import Carrito from "./CardWidget/CardWidget";
+import CardWidget from "./CardWidget/CardWidget";
 
 import "./css/navStyles.css"
 import ButtonComponent from "./ButtonComponent/ButtonComponent";
 import { Link } from "react-router-dom";
+
 function NavBar() {
+  
   return (
     <header>
       <nav className="navBar">
@@ -11,7 +13,8 @@ function NavBar() {
         <ButtonComponent to="/category/puertas" label="Puertas"/>
         <ButtonComponent to="/category/ventanas" label="Ventanas"/>
         <ButtonComponent label="CONTACTO"/>
-        <Carrito/>
+        
+        <CardWidget/>
       </nav>
     </header>
   )

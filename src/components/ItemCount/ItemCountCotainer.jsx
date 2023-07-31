@@ -13,14 +13,14 @@ function ItemCountContainer({stock,onConfirm}) {
         }
     }
     function handleClicksResta() {
-        if (clicks >= 1) {
+        if (clicks > 1) {
             setClicks((prevState) => prevState - 1);
         }
     }
     return(
         <div className="contadorContainer">
             <ItemCount onClickSuma={handleClicksSuma} onClickResta={handleClicksResta} clickCount={clicks} />
-            <ButtonComponent onClick={()=>onConfirm(clicks)}  label="Comprar" />
+            <ButtonComponent onClick={()=>onConfirm(clicks)}  label="Añadir al carrito" />
         </div>
     )
 }
