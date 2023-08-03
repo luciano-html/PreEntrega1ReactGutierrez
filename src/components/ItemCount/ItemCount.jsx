@@ -2,8 +2,6 @@ import React from "react";
 import "./itemCountStyles.css"
 
 function ItemCount(props) {
-
-
     return (
         <div className="contador">
             <button onClick={props.onClickResta}>

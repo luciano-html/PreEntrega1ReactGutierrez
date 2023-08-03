@@ -9,8 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-
-
+// 1 20
 
 // Crear el context
 // Importar/Exportar
@@ -22,12 +21,18 @@ const cartContext = createContext({ cart: [] })
 function CartProvider(props) {
   const [cart, setCart] = useState([])
 
+  
+
+  
+
+
   function addToCart(product, count) {
     const newCart = [...cart] //copiamos el estado cart para modificarlo
     const newItemObj = { count, ...product } // creamos un objeto nuevo con count y product dentro del mismo
     newCart.push(newItemObj) //cuando llamamos a la funcion se pushea los datos de itemDetailContainer a newItemObj
     setCart(newCart)
     console.log(newCart)
+    
     // setCart([...cart,{...product,count}])
     
     toast.success(`Agregaste  ${newItemObj.count} ${newItemObj.title} al carrito `, {
@@ -59,6 +64,7 @@ function CartProvider(props) {
 
 
 function App() {
+  
 
   return (
     <div className='mainContainer'>

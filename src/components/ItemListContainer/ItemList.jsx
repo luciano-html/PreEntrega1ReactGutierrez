@@ -1,14 +1,27 @@
 import React from "react";
 import Item from "../Item/Item";
+import { Ring } from '@uiball/loaders'
 
-function ItemList({products}){
-    // console.log(products)
-    return(
+import 'react-loading-skeleton/dist/skeleton.css'
+
+function ItemList({ products }) {
+
+    // if(products.length===0){
+    //     return <Ring size={35} color="#fa5100" />
+    // }
+    
+    return (
+        
         <div className="itemContainer">
-            {products.map((item) => (
-                <Item key={item.id} {...item} />
-            ))}
-            
+            {products.length===0?
+            <Ring size={35} color="#fa5100" />
+            :
+            <div>
+                {products.map((item) => (
+                    <Item key={item.id} {...item} />
+                ))}
+            </div>}
+
         </div>
     )
 }

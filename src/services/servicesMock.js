@@ -11,7 +11,8 @@ const data = [
         price: 150,
         stock: 10,
         description: "Ventana de aluminio estándar de tamaño medio.",
-        img: "https://www.aberturasruta8.com.ar/wp-content/uploads/2019/11/ventana-aluminio-modena1.jpg"
+        img: "https://www.aberturasruta8.com.ar/wp-content/uploads/2019/11/ventana-aluminio-modena1.jpg",
+        freeShipping : true
     },
     {
         title: "Ventana de aluminio con cristal doble",
@@ -20,7 +21,9 @@ const data = [
         price: 200,
         stock: 5,
         description: "Ventana de aluminio con cristal doble para mayor aislamiento.",
-        img: "https://http2.mlstatic.com/D_NQ_NP_890556-MLA31578035313_072019-O.webp"
+        img: "https://http2.mlstatic.com/D_NQ_NP_890556-MLA31578035313_072019-O.webp",
+        discount: 12,
+        freeShipping : true
     },
     {
         title: "Ventana de aluminio repartida",
@@ -29,7 +32,8 @@ const data = [
         price: 180,
         stock: 8,
         description: "Ventana de aluminio corredera de tamaño grande.",
-        img: "https://www.tecnooeste.com.ar/image/cache/herrero/ventanas-aluminio-blanco-120x110-vidrio-repartido-D_NQ_NP_623086-MLA32093709828_092019-F-800x800.jpg"
+        img: "https://www.tecnooeste.com.ar/image/cache/herrero/ventanas-aluminio-blanco-120x110-vidrio-repartido-D_NQ_NP_623086-MLA32093709828_092019-F-800x800.jpg",
+        freeShipping : true
     },
     {
         title: "Puerta de aluminio moderna",

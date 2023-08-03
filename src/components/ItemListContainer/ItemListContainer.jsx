@@ -22,7 +22,10 @@ function ItemListContainer(props) {
         [categoryId]
     )
     return (
-        <ItemList products={products} />
+        <>
+            <ItemList products={products} />
+        </>
+
     )
 }
 export default ItemListContainer;

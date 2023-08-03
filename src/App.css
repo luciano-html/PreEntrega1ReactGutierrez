@@ -5,9 +5,9 @@
   box-sizing: border-box;
 }
 .mainContainer{
-  flex-direction: column;
+  /* flex-direction: column;
   justify-content: center;
-  display: flex;
+  display: flex; */
   margin: auto;
   width: 90%;
 }

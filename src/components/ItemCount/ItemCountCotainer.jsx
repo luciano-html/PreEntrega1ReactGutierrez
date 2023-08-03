@@ -1,7 +1,10 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
+
 import ItemCount from "./ItemCount";
 import ButtonComponent from "../NavBar/ButtonComponent/ButtonComponent";
+
+
 
 function ItemCountContainer({stock,onConfirm}) {
     const [clicks, setClicks] = useState(1);
@@ -18,9 +21,12 @@ function ItemCountContainer({stock,onConfirm}) {
         }
     }
     return(
+        
         <div className="contadorContainer">
+            
             <ItemCount onClickSuma={handleClicksSuma} onClickResta={handleClicksResta} clickCount={clicks} />
             <ButtonComponent onClick={()=>onConfirm(clicks)}  label="Añadir al carrito" />
+        
         </div>
     )
 }
