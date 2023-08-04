@@ -9,7 +9,7 @@ function CardWidget() {
     let context = useContext(cartContext)
     
     return (
-        <Link className="carro" href="">
+        <Link to={"/cart"} className="carro" href="">
             <span className="cantCarro">
                 <p className="">{context.getTotalItems()}</p>
                 

@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createContext, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import CartContainer from './components/CartContainer/CartContainer';
 
 
 
@@ -21,20 +22,12 @@ const cartContext = createContext({ cart: [] })
 function CartProvider(props) {
   const [cart, setCart] = useState([])
 
-  
-
-  
-
-
   function addToCart(product, count) {
     const newCart = [...cart] //copiamos el estado cart para modificarlo
     const newItemObj = { count, ...product } // creamos un objeto nuevo con count y product dentro del mismo
     newCart.push(newItemObj) //cuando llamamos a la funcion se pushea los datos de itemDetailContainer a newItemObj
     setCart(newCart)
     console.log(newCart)
-    
-    // setCart([...cart,{...product,count}])
-    
     toast.success(`Agregaste  ${newItemObj.count} ${newItemObj.title} al carrito `, {
       position: "top-right",
       autoClose: 500,
@@ -53,7 +46,7 @@ function CartProvider(props) {
     })
     return total
   }
-
+  
 
   return (
     <cartContext.Provider value={{ cart, addToCart, getTotalItems }}>
@@ -76,6 +69,7 @@ function App() {
             <Route path='/category/:categoryId' element={<ItemListContainer />} />
             <Route path="/product/:id" element={<ItemDetailContainer />} />
             <Route path="*" element={"Page not fount: 404"} />
+            <Route path="/cart"element={<CartContainer/>}/>
           </Routes>
           <ToastContainer />
         </BrowserRouter>

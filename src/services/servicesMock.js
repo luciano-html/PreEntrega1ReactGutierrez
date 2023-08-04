@@ -9,7 +9,7 @@ const data = [
         category: "ventanas",
         id: 1,
         price: 150,
-        stock: 10,
+        stock: 0,
         description: "Ventana de aluminio estándar de tamaño medio.",
         img: "https://www.aberturasruta8.com.ar/wp-content/uploads/2019/11/ventana-aluminio-modena1.jpg",
         freeShipping : true
@@ -23,7 +23,7 @@ const data = [
         description: "Ventana de aluminio con cristal doble para mayor aislamiento.",
         img: "https://http2.mlstatic.com/D_NQ_NP_890556-MLA31578035313_072019-O.webp",
         discount: 12,
-        freeShipping : true
+        freeShipping : false
     },
     {
         title: "Ventana de aluminio repartida",
@@ -40,9 +40,10 @@ const data = [
         category: "puertas",
         id: 4,
         price: 200,
-        stock: 10,
+        stock: 0,
         description: "Una elegante puerta de aluminio con diseño moderno.",
-        img: "https://www.aberturastorri.com.ar/sitio/wp-content/uploads/2021/06/V580-1.jpg"
+        img: "https://www.aberturastorri.com.ar/sitio/wp-content/uploads/2021/06/V580-1.jpg",
+        freeShipping:true
     },
     {
         title: "Puerta de aluminio clásica",
@@ -51,7 +52,9 @@ const data = [
         price: 180,
         stock: 5,
         description: "Una puerta de aluminio clásica y resistente.",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDVzyUMxdXg0BEqrwRg0o1zhhrSHxi8b5ndA&usqp=CAU"
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDVzyUMxdXg0BEqrwRg0o1zhhrSHxi8b5ndA&usqp=CAU",
+        discount: 8,
+        freeShipping:true
     }
 ]
 

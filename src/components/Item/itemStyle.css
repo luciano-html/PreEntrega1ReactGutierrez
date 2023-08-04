@@ -6,8 +6,8 @@ img{
 .tarjeta{
     background-color: white;
     gap: 10px;
+    height: 500px;
     width: 400px;
-    height: 400px;
     padding: 25px;
     border: 1px solid #8b8b8b;
     margin: 25px;
@@ -21,4 +21,10 @@ img{
 }
 .tarjeta:hover{
     box-shadow: 0 0 4px #fa5100;
+}
+.precio{
+    padding: 2px;
+}
+.freeShipping{
+    padding: 5px;
 }
