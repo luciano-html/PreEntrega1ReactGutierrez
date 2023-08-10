@@ -4,14 +4,14 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './components/context/Context';
-
+import OrderConfirm from './components/OrderConfirm/OrderConfirm';
 import 'react-toastify/dist/ReactToastify.css';
 import CartContainer from './components/CartContainer/CartContainer';
+import Checkout from './components/Checkout/Checkout';
 
-//clase 3:18
+
 
 function App() {
-
 
   return (
     <div className='mainContainer'>
@@ -24,6 +24,8 @@ function App() {
             <Route path="/product/:id" element={<ItemDetailContainer />} />
             <Route path="*" element={"Page not fount: 404"} />
             <Route path="/cart" element={<CartContainer />} />
+            <Route path="/checkout" element={<Checkout/>}/>
+            <Route path="/orderConfirm/:id" element={ <OrderConfirm/>}/>
           </Routes>
           
         </BrowserRouter>

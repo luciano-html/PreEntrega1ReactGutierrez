@@ -2,31 +2,28 @@ import React from "react"
 import { createContext } from "react"
 import { useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
-// Crear el context
-// Importar/Exportar
-// Consumirlo
-// Crear provider
-// Crear prop Value
 
 const cartContext = createContext({ cart: [] })
 function CartProvider(props) {
-    const [cart, setCart] = useState([])
-    const [totalPrice, setTotalPrice] = useState([])
+    const [cart, setCart] = useState([]);
+
+    function removeItem(cart, itemIdToRemove) {
+        setCart(cart.filter(item => item.id !== itemIdToRemove));
+    }
 
     function addToCart(product, count) {
-        const newCart = [...cart] //copiamos el estado cart para modificarlo
+        const existingItem = cart.find(item => item.id === product.id);
+        if (existingItem) {
+            const updatedCart = cart.map(item =>
+                item.id === existingItem.id ? { ...item, count: item.count + count } : item
+            );
+            setCart(updatedCart);
+        } else {
+            const newItemObj = { count, ...product };
+            setCart(prevCart => [...prevCart, newItemObj]);
+        }
 
-        const newItemObj = { count, ...product } // creamos un objeto nuevo con count y product dentro del mismo
-
-        newCart.push(newItemObj) //cuando llamamos a la funcion se pushea los datos de itemDetailContainer a newItemObj
-
-        let pricePush = product.price
-        
-        totalPrice.push(pricePush * count)
-
-        setCart(newCart)
-
-        toast.success(`Agregaste  ${newItemObj.count} ${newItemObj.title} al carrito `, {
+        toast.success(`Agregaste  ${count} ${product.title} al carrito `, {
             position: "top-right",
             autoClose: 500,
             hideProgressBar: true,
@@ -35,22 +32,29 @@ function CartProvider(props) {
             draggable: true,
             progress: undefined,
             theme: "dark",
-        })
-        return newCart
+        });
     }
     
-    function removeItem(cart){
-        console.log(cart)
-        setCart(prevState => prevState.filter(item=>item.id!==cart.id))
+    function totalCalculated() {
+        let total = 0;
+        for (const item of cart) {
+            total += item.price * item.count;
+        }
+        return total;
     }
-    
+    const totalBuy = totalCalculated();
+
+    function clearCart(){
+        return null
+    }
+
     return (
-        <cartContext.Provider value={{ cart, addToCart,totalPrice,removeItem }}>
+        <cartContext.Provider value={{ cart,  addToCart, removeItem, totalCalculated,totalBuy,clearCart }}>
             {props.children}
             <ToastContainer />
         </cartContext.Provider>
 
     )
 }
-export { CartProvider, cartContext };
+export { CartProvider, cartContext};
 

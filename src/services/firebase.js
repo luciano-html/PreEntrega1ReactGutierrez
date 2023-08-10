@@ -1,4 +1,4 @@
-import React from "react";
+
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, doc, getDoc, getDocs, where, query ,addDoc } from "firebase/firestore"
 
@@ -39,7 +39,6 @@ async function getProductData(id) {
     if (documentSnap.exists()) {
         return ({ ...documentSnap.data(), id: documentSnap.id })
     } else {
-        // docSnap.data() will be undefined in this case
         console.log("No such document!");
     }
 
