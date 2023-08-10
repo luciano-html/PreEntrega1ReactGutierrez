@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import "./itemDetailContainerStyles.css"
-import { getProductData } from "../../services/servicesMock";
+import { getProductData } from "../../services/firebase";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { Ring } from '@uiball/loaders'

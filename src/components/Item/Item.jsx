@@ -2,7 +2,7 @@ import React from "react";
 import "./itemStyle.css"
 import ButtonComponent from "../NavBar/ButtonComponent/ButtonComponent";
 function Item(props) {
-    // const {title,img,price}= props;
+
     const styleDiscount = {
         backgroundColor: props.discount ? "green" : "inherit",
         color: props.discount ? "white" : "inherit"
@@ -12,6 +12,7 @@ function Item(props) {
         backgroundColor: props.freeShipping ? "green" : "inherit",
         color: props.freeShipping ? "white" : "inherit"
     }
+
     return (
 
         <div className="tarjeta">
@@ -34,9 +35,9 @@ function Item(props) {
             }
             {
                 props.stock ?
-                props.freeShipping ?
-                    <p className="freeShipping" style={styleFreeShipping}>Envio Gratis</p>
-                    : ""
+                    props.freeShipping ?
+                        <p className="freeShipping" style={styleFreeShipping}>Envio Gratis</p>
+                        : ""
                     : "Sin stock"
 
             }
