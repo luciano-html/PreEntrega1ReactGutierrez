@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { cartContext } from "../context/Context";
 import ButtonComponent from "../NavBar/ButtonComponent/ButtonComponent";
+import "./cartContainerStyles.css"
+
 
 
 
@@ -20,17 +22,27 @@ function CartContainer() {
                     {cart.map(item => (
                         <div className="cartItem" key={item.id}>
                             <h2>{item.title}</h2>
-                            <p>Precio unidad: ${item.price} </p>
+                            <p>Precio unidad: ${item.price - (item.price * item.discount / 100)} </p>
                             <p>Cantidad: {item.count} </p>
+                            
                             <button onClick={() => deleteItem(item.id)}>Eliminar</button>
                         </div>
                     ))}
-                    <p>Total:{totalBuy}</p>
+                    <div className="botonesCart">
+                    <p className="totalCart">Total: ${totalBuy}</p>
                     <ButtonComponent onClick={clearCart} label="Vaciar Carrito" />
-                    <ButtonComponent to="/checkout" label="Comprar" />
+                    <ButtonComponent to="/"label="Seguir comprando" />
+                    <ButtonComponent to="/checkout" label="Confirmar compra" />
+                    </div>
+                    
                 </div>
             : 
-                <p>No hay productos en el carrito</p>
+                <div className="noProducts">
+                    <p>No hay productos en el carrito</p>
+                    <ButtonComponent to="/" label="Empezar a comprar" />
+                </div>
+                
+
             }
         </div>
     );

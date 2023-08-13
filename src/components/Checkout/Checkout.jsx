@@ -1,17 +1,22 @@
 import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { cartContext } from "../context/Context";
 import { createDocOrder } from "../../services/firebase";
 import { toast } from 'react-toastify';
 import ButtonComponent from "../NavBar/ButtonComponent/ButtonComponent";
-import OrderConfirm from "../OrderConfirm/OrderConfirm";
+import "./checkoutStyles.css"
+
 
 function Checkout() {
-    const { cart, totalBuy } = useContext(cartContext)
+    const { cart, totalBuy,clearCart } = useContext(cartContext)
     const [buyer, setBuyer] = useState({
         completeName: "",
         email: "",
         age: "",
     });
+
+    const navigate = useNavigate()
+
     async function handleCheckOut(e) {
         e.preventDefault()
         const newOrderData = {
@@ -37,6 +42,8 @@ function Checkout() {
                 progress: undefined,
                 theme: "dark",
             })
+            clearCart()
+            
         } catch (error) {
             console.log("No se pudo realizar la compra", error)
         }
@@ -49,26 +56,23 @@ function Checkout() {
         setBuyer(newState);
     }
     return (
-        <form>
-            <h2>Completa tus datos para completar la compra🛍</h2>
+        
+        <form className="formContainer">
+            {cart.length>0?<>
+            <h2>Complete sus datos</h2>
+            <div className="inputsContainer">
+                <label htmlFor="email">Nombre</label>
+                <input value={buyer.firstname}  name="completeName" type="text" onChange={onInputChange} />
 
-            <div>
-                <label value={buyer.firstname} htmlFor="email" style={{ width: "100px", marginRight: 4 }}>Nombre</label>
-                <input name="completeName" type="text" onChange={onInputChange} />
+                <label htmlFor="email">Email</label>
+                <input value={buyer.email} name="email" type="email" onChange={onInputChange}/>
+            
+                <label>Edad</label>
+                <input value={buyer.age} name="age"type="number"onChange={onInputChange}/>
             </div>
-
-            <div>
-                <label value={buyer.email} htmlFor="email" style={{ width: "100px", marginRight: 4 }}>Email</label>
-                <input name="email" type="email" onChange={onInputChange}/>
-            </div>
-
-            <div>
-                <label value={buyer.age} style={{ width: "100px", marginRight: 4 }}>Edad</label>
-                <input name="age"type="number"onChange={onInputChange}/>
-            </div>
-
-            <ButtonComponent disabled={!(buyer.completeName !== "" && buyer.email !== "" && buyer.age !== "")}onClick={handleCheckOut} to={OrderConfirm} label="Confirmar"/>
-            <ButtonComponent to="/cart" label="Volver al carrito" />
+            {buyer.firstname !== "" && buyer.lastname !== "" && buyer.age !== ""?<ButtonComponent onClick={handleCheckOut}label="Confirmar"/>:""}
+            <ButtonComponent to="/cart" label="Volver al carrito" /></>
+            :<ButtonComponent to="/" label="Volver al Inicio" />}
         </form>
     )
 }

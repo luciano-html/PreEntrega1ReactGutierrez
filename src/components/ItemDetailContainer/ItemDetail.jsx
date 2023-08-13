@@ -24,9 +24,15 @@ function ItemDetail(props) {
             <div className="descriptionContainer">
                 <h2>{props.title}</h2>
                 <p>{props.description}</p>
-                <span>{props.price}$</span>
+
+                {props.discount? props.price - (props.price * props.discount / 100):
+                <span>{props.price}$</span>}
+                
                 {
-                    addedToCart? <ButtonComponent label="Ir al Carrito"/>
+                    addedToCart? <>
+                    <ButtonComponent to="/cart" label="Ir al Carrito"/>
+                    <ButtonComponent to="/" label="Seguir comprando"/></>
+                    
                     :
                     <ItemCountContainer onConfirm={handleAddToCart} stock={props.stock} />
                 }

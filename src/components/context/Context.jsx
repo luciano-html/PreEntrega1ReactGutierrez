@@ -38,14 +38,26 @@ function CartProvider(props) {
     function totalCalculated() {
         let total = 0;
         for (const item of cart) {
-            total += item.price * item.count;
+            const discountedPrice = item.price - (item.price * item.discount / 100);
+            total += discountedPrice * item.count;
         }
+    
         return total;
     }
     const totalBuy = totalCalculated();
 
-    function clearCart(){
-        return null
+    function clearCart() {
+        setCart([]);
+        toast.info("Carrito vaciado", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
     }
 
     return (

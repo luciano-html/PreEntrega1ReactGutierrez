@@ -49,7 +49,7 @@ const data = [
         title: "Puerta de aluminio clásica",
         category: "puertas",
         id: 5,
-        price: 180,
+        price: 180+5,
         stock: 5,
         description: "Una puerta de aluminio clásica y resistente.",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDVzyUMxdXg0BEqrwRg0o1zhhrSHxi8b5ndA&usqp=CAU",
