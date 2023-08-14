@@ -72,7 +72,7 @@ function Checkout() {
             </div>
             {buyer.firstname !== "" && buyer.lastname !== "" && buyer.age !== ""?<ButtonComponent onClick={handleCheckOut}label="Confirmar"/>:""}
             <ButtonComponent to="/cart" label="Volver al carrito" /></>
-            :<ButtonComponent to="/" label="Volver al Inicio" />}
+            :<ButtonComponent to="/" label="Empezar a comprar" />}
         </form>
     )
 }
