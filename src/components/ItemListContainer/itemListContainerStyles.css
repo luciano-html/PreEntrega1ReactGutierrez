@@ -1,16 +1,8 @@
-.greeting{
-    width: 100%;
-}
 
-.itemContainer{
-    background-color: white;
-    outline: 0.5px solid black;
-    gap: 55px;
-    flex-wrap: wrap;
-    flex-direction: row;
+.productos{
     display: flex;
-    margin: auto;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    margin-bottom: 100px;
+    justify-content: center;
+    margin: auto;
 }

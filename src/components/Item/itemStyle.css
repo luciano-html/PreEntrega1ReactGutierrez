@@ -4,23 +4,25 @@ img{
 }
 
 .tarjeta{
-    background-color: white;
-    gap: 10px;
-    height: 500px;
-    width: 400px;
-    padding: 25px;
-    border: 1px solid #8b8b8b;
-    margin: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 0 0px #fa5100;
 
+    background-color: white;
+
+    width: 400px;
+    gap: 10px;
+    height: 500px;
+    padding: 25px;
+    margin: 25px;
+
+    border: 1px solid #8b8b8b;
+    box-shadow: 0 0 0px #fa5100;
     transition: box-shadow 0.3s ease;
 }
 .tarjeta:hover{
-    box-shadow: 0 0 4px #fa5100;
+    box-shadow: 0 0 4px #fa4f0023;
 }
 .precio{
     padding: 2px;

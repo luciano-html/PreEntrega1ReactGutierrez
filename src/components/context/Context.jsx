@@ -41,7 +41,6 @@ function CartProvider(props) {
             const discountedPrice = item.price - (item.price * item.discount / 100);
             total += discountedPrice * item.count;
         }
-    
         return total;
     }
     const totalBuy = totalCalculated();

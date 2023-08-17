@@ -7,18 +7,18 @@ import { CartProvider } from './components/context/Context';
 import 'react-toastify/dist/ReactToastify.css';
 import CartContainer from './components/CartContainer/CartContainer';
 import Checkout from './components/Checkout/Checkout';
-
+import Home from './components/HomeComponent/Home';
 
 
 function App() {
-
   return (
     <div className='mainContainer'>
       <CartProvider>
         <BrowserRouter>
-          <NavBar />
+          <NavBar/>
           <Routes >
-            <Route path="/" element={<ItemListContainer />} />
+            <Route path='/'element={<Home/>}/>
+            <Route path="/itemlist" element={<ItemListContainer />} />
             <Route path='/category/:categoryId' element={<ItemListContainer />} />
             <Route path="/product/:id" element={<ItemDetailContainer />} />
             <Route path="*" element={"Page not fount: 404"} />

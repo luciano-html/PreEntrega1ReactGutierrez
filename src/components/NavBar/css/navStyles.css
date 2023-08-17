@@ -1,33 +1,88 @@
+
+
 /* color naranja #fa5100 */
-.navBar{
-    width: 100%;
-    /* background: #8b8b8b; */
-    /* outline: 1px solid black; */ 
-    border-radius: 5px;
-    margin: auto;
-    margin-top: 10px;
-    padding: 12px;
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    border-color: black;
+    border-style: solid;
+    border-width: 0px 0px 1px 0;
+
+    background-color: #ffffff;
+    position: sticky;
+    top: 00.1px;
+}
+
+.navBar {
+    width: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    
+}
 
-    
-    
+.logoHeaderContainer{
+    margin: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
 }
-header .navBar .logoHeader{
-    width: 200px;
+
+header .navBar .logoHeader:hover {
+    opacity: 0.85;
 }
-.carro{
+
+
+.buttonNav{
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.socialMediaNav{
+    
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: space-between;
+    width:10%;
     gap: 10px;
+    margin-left: 5px;
 }
-.carroImg{
-    width: 50px;
+.socialMediaNav img{
+    object-fit: fill;
+    max-width: 25px;
+    max-height: 25px;
+    transition: transform 0.2s ease;
+}
+.socialMediaNav img:hover{
+    transform: scale(1.1);
+}
+
+.carro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-left: 10px;
+    gap: 10px;
+
+    text-decoration: none;
+    color: #fa5100;
+    font-weight: bold;
+}
+
+
+.carroImg {
+    max-width: 30px;
+    max-height: 30px;
 }
 
 /* ItemListContainer */

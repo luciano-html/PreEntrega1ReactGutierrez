@@ -1,5 +1,4 @@
 * {
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,9 +7,6 @@
 }
 
 .mainContainer {
-  /* flex-direction: column;
-  justify-content: center;
-  display: flex; */
   margin: auto;
-  width: 90%;
+  width: 100%;
 }
