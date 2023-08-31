@@ -7,7 +7,8 @@ import { CartProvider } from './components/context/Context';
 import 'react-toastify/dist/ReactToastify.css';
 import CartContainer from './components/CartContainer/CartContainer';
 import Checkout from './components/Checkout/Checkout';
-import Home from './components/HomeComponent/Home';
+import Home from './components/HomeComponent/HomeComponent';
+
 
 
 function App() {
@@ -25,10 +26,11 @@ function App() {
             <Route path="/cart" element={<CartContainer />} />
             <Route path="/checkout" element={<Checkout/>}/>
           </Routes>
-          
         </BrowserRouter>
-
       </CartProvider>
+      
+
+      
     </div>
   );
 }

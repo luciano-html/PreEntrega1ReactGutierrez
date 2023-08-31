@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import { cartContext } from "../context/Context";
 import { createDocOrder } from "../../services/firebase";
 import { toast } from 'react-toastify';
@@ -15,7 +15,7 @@ function Checkout() {
         age: "",
     });
 
-    const navigate = useNavigate()
+    
 
     async function handleCheckOut(e) {
         e.preventDefault()

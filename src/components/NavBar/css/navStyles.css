@@ -5,32 +5,57 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    border-color: black;
-    border-style: solid;
-    border-width: 0px 0px 1px 0;
-
     background-color: #ffffff;
     position: sticky;
-    top: 00.1px;
+    top: 000.1px;
+}
+
+.socialMediaNav{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width:70%;
+    gap: 10px;
+}
+.socialMediaNav img{
+    
+    max-width: 18px;
+    max-height: 18px;
+    transition: transform 0.2s ease;
+}
+.socialMediaNav img:hover{
+    transform: scale(1.1);
 }
 
 .navBar {
-    width: 90%;
+    width: 70%;
+    height: 50px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
-    
 }
+/* .navBar::after{
+    color: white;
+    position: absolute;
+    top: 97.97px;
+    display: flex;
+    height: 541px;
+    width: inherit;
+    border:5px solid #fa5100;
+    
+} */
+
 
 .logoHeaderContainer{
-    margin: 25px;
+    
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 15%;
+    width: 250px;
+
 }
+
 
 header .navBar .logoHeader:hover {
     opacity: 0.85;
@@ -38,32 +63,13 @@ header .navBar .logoHeader:hover {
 
 
 .buttonNav{
-    width: 75%;
+    width: 50%;
     display: flex;
-    justify-content: flex-start;
+    justify-content:space-between;
     align-items: center;
     gap: 5px;
 }
 
-.socialMediaNav{
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width:10%;
-    gap: 10px;
-    margin-left: 5px;
-}
-.socialMediaNav img{
-    object-fit: fill;
-    max-width: 25px;
-    max-height: 25px;
-    transition: transform 0.2s ease;
-}
-.socialMediaNav img:hover{
-    transform: scale(1.1);
-}
 
 .carro {
     display: flex;
@@ -81,6 +87,7 @@ header .navBar .logoHeader:hover {
 
 
 .carroImg {
+    margin: 5px;
     max-width: 30px;
     max-height: 30px;
 }

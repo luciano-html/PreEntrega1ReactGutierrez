@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useContext } from "react";
+import { useState} from "react";
 
 import ItemCount from "./ItemCount";
 import ButtonComponent from "../NavBar/ButtonComponent/ButtonComponent";

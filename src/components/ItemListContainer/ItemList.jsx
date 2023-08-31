@@ -9,20 +9,24 @@ function ItemList({ products }) {
     // if(products.length===0){
     //     return <Ring size={35} color="#fa5100" />
     // }
-    
+
     return (
-        
-            <div className="itemContainer">
-            {products.length===0?
-            <Ring size={35} color="#fa5100" />
-            :
-            <div className="productos">
-                {products.map((item) => (
-                    <Item key={item.id} {...item} />
-                ))}
-            </div>}
+
+        <div className="itemContainer">
+            {products.length === 0 ?
+                <div className="loader">
+                    <small>Cargando</small>
+                    <Ring size={35} color="#fa5100" />
+                </div>
+
+                :
+                <div className="productos">
+                    {products.map((item) => (
+                        <Item key={item.id} {...item} />
+                    ))}
+                </div>}
         </div>
-        
+
     )
 }
 export default ItemList;

@@ -1,0 +1,39 @@
+
+.widgetContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 100px;
+    width: 500px;
+    overflow: hidden;
+
+    background-color: #ff5100;
+    color: white;
+    border: 0px;
+}
+.widgetContainer:hover{
+    opacity: 0.9;
+}
+
+.widgetContainer .texts{
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+
+    width: 25%;
+    margin: 20px;
+    gap: 50px;
+
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 18px;
+}
+.widgetContainer .icon{
+    
+    width: 25%;
+    margin: 25px;
+}

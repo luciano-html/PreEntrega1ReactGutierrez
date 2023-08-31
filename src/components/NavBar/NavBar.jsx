@@ -13,8 +13,16 @@ function NavBar() {
   return (
     <header>
 
+        <div className="socialMediaNav">
+          <Link><img src={instagram} alt=""/></Link>
+          <Link><img src={youtube} alt=""/></Link>
+          <Link><img src={facebook} alt=""/></Link>
+          <Link><img src={twitter} alt=""/></Link>
+          <Link><img src={whatsapp} alt=""/></Link>
+        </div>
       <nav className="navBar">
         
+
           <Link className="logoHeaderContainer" to="/">
             <img className='logoHeader' alt="asd" src='https://herfasa.com/wp-content/uploads/2020/12/logo.png'>
             </img>
@@ -28,13 +36,6 @@ function NavBar() {
           <ButtonComponent to="/category/ventanas" label="Ventanas"/>
         </div> 
 
-        <div className="socialMediaNav">
-          <Link><img src={instagram} alt=""/></Link>
-          <Link><img src={youtube} alt=""/></Link>
-          <Link><img src={facebook} alt=""/></Link>
-          <Link><img src={twitter} alt=""/></Link>
-          <Link><img src={whatsapp} alt=""/></Link>
-        </div>
 
           <CardWidget />
       </nav>

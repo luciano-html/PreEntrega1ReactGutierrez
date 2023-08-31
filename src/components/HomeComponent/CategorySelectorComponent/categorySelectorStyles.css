@@ -1,0 +1,29 @@
+.categorySelectorContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 50px;
+    width: 70%;
+    margin: auto;
+}
+
+.topSelectorContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    margin: auto;
+}
+.text{
+    padding: 20px;
+}
+.text h3{
+    color: #ff5100;
+    font-size: 50px;
+}
+.btnNav{
+    margin-top: 25px;
+}
